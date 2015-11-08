@@ -1,11 +1,7 @@
 # MongoDb Persistence for IdentityServer3 #
-
-**Current status: RC1**
-
-This package supports the IdentityServer functionality. For administrative functions see the [admin project](https://github.com/jageall/IdentityServer3.Admin.MongoDb). There is also a [powershell module](https://github.com/jageall/IdentityServer3.AdminModule) available.
+A divergent fork of https://github.com/jageall/IdentityServer.v3.MongoDb.
 
 ## Build Status ##
-[![Build status](https://ci.appveyor.com/api/projects/status/gvfsmakv08fmxo68?svg=true)](https://ci.appveyor.com/project/jageall/identityserver-v3-mongodb)
 
 ## Usage ##
 
@@ -40,6 +36,7 @@ This package supports the IdentityServer functionality. For administrative funct
 
 ## Credits ##
 MongoDb Persistence for Thinktecture IdentityServer is built using the following great open source projects:
+- [IdentityServer.v3.MongoDb](https://github.com/jageall/IdentityServer.v3.MongoDb)
 - [Thinktecture Identity Server v3](https://github.com/identityserver/identityserver3)
 - [MongoDb](http://www.mongodb.org/)
 - [MongoDb C# Driver](https://github.com/mongodb/mongo-csharp-driver)
@@ -47,4 +44,3 @@ MongoDb Persistence for Thinktecture IdentityServer is built using the following
 - [xUnit](https://github.com/xunit)
 - [Autofac](http://autofac.org/)
 - [LibLog](https://github.com/damianh/liblog)
-thanks to all [contributors](https://github.com/jageall/IdentityServer3.MongoDb/graphs/contributors)!

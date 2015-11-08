@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>AuthCentral.MongoStore</id>
+    <title>IdentityServer3 MongoDB Persistence for AuthCentral</title>
+    <version>$version$</version>
+    <authors>FSW</authors>
+    <owners>FSW</owners>
+    <projectUrl>http://gitlab.fsw.com/architecture/auth-central-mongo-store</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>IdentityServer3 MongoDB Persistence for AuthCentral</description>
+    <copyright>Copyright 2014, 2015</copyright>
+    <tags>AuthCentral IdentityServer MongoDb</tags>
+    <dependencies>
+      <dependency id="Owin" version="1.0" />
+      <dependency id="IdentityServer3"
+                  version="2.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+      <file src="Out\AuthCentral.MongoStore.dll" target="lib\net45"/>
+  </files>
+</package>
