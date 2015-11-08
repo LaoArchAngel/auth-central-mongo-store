@@ -1,4 +1,12 @@
 ﻿/*
+ * ---------------------------------------------------------------------------
+ *
+ * NOTICE: This file was modified from it's original form by Food Service
+ *         Warehouse and is hencforce considered a derivitive work. The 
+ *         Original Copyright as been included, unmodified, below.
+ *
+ * ---------------------------------------------------------------------------
+ *         
  * Copyright 2014, 2015 James Geall
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,11 +28,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("Core.MongoDb.Tests")]
+[assembly: AssemblyTitle("AuthCentral.MongoStore.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Core.MongoDb.Tests")]
+[assembly: AssemblyProduct("AuthCentral.MongoStore.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -37,7 +45,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("47b451c8-a499-4353-a840-6443b821c9de")]
+[assembly: Guid("f6945b09-1372-440e-8675-28a3f8062c5f")]
 
 // Version information for an assembly consists of the following four values:
 //

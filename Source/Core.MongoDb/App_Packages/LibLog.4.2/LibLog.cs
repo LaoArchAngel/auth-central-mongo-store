@@ -1,29 +1,26 @@
-//===============================================================================
-// LibLog
-//
-// https://github.com/damianh/LibLog
-//===============================================================================
-// Copyright Â© 2011-2015 Damian Hickey.  All rights reserved.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
-//===============================================================================
-
+/*
+ * ---------------------------------------------------------------------------
+ *
+ * NOTICE: This file was modified from it's original form by Food Service
+ *         Warehouse and is hencforce considered a derivitive work. The 
+ *         Original Copyright as been included, unmodified, below.
+ *
+ * ---------------------------------------------------------------------------
+ *         
+ * Copyright 2014, 2015 James Geall
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 // ReSharper disable PossibleNullReferenceException
 
 // Define LIBLOG_PORTABLE conditional compilation symbol for PCL compatibility
@@ -40,23 +37,23 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "IdentityServer3.MongoDb.Logging")]
-[assembly: SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Scope = "member", Target = "IdentityServer3.MongoDb.Logging.Logger.#Invoke(IdentityServer3.MongoDb.Logging.LogLevel,System.Func`1<System.String>,System.Exception,System.Object[])")]
+[assembly: SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "AuthCentral.MongoStore.Logging")]
+[assembly: SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Scope = "member", Target = "AuthCentral.MongoStore.Logging.Logger.#Invoke(AuthCentral.MongoStore.Logging.LogLevel,System.Func`1<System.String>,System.Exception,System.Object[])")]
 
 // If you copied this file manually, you need to change all "YourRootNameSpace" so not to clash with other libraries
 // that use LibLog
 #if LIBLOG_PROVIDERS_ONLY
-namespace IdentityServer3.MongoDb.LibLog
+namespace AuthCentral.MongoStore.LibLog
 #else
-namespace IdentityServer3.MongoDb.Logging
+namespace AuthCentral.MongoStore.Logging
 #endif
 {
     using System.Collections.Generic;
     using System.Diagnostics.CodeAnalysis;
 #if LIBLOG_PROVIDERS_ONLY
-    using IdentityServer3.MongoDb.LibLog.LogProviders;
+    using AuthCentral.MongoStore.LibLog.LogProviders;
 #else
-    using IdentityServer3.MongoDb.Logging.LogProviders;
+    using AuthCentral.MongoStore.Logging.LogProviders;
 #endif
     using System;
 #if !LIBLOG_PROVIDERS_ONLY
@@ -426,7 +423,7 @@ namespace IdentityServer3.MongoDb.Logging
         /// The disable logging environment variable. If the environment variable is set to 'true', then logging
         /// will be disabled.
         /// </summary>
-        public const string DisableLoggingEnvironmentVariable = "IdentityServer3.MongoDb_LIBLOG_DISABLE";
+        public const string DisableLoggingEnvironmentVariable = "AuthCentral.MongoStore_LIBLOG_DISABLE";
         private const string NullLogProvider = "Current Log Provider is not set. Call SetCurrentLogProvider " +
                                                "with a non-null value first.";
         private static dynamic s_currentLogProvider;
@@ -722,9 +719,9 @@ namespace IdentityServer3.MongoDb.Logging
 }
 
 #if LIBLOG_PROVIDERS_ONLY
-namespace IdentityServer3.MongoDb.LibLog.LogProviders
+namespace AuthCentral.MongoStore.LibLog.LogProviders
 #else
-namespace IdentityServer3.MongoDb.Logging.LogProviders
+namespace AuthCentral.MongoStore.Logging.LogProviders
 #endif
 {
     using System;

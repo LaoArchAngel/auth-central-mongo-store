@@ -1,13 +1,4 @@
-extensions: .cs
 /*
- * ---------------------------------------------------------------------------
- *
- * NOTICE: This file was modified from it's original form by Food Service
- *         Warehouse and is hencforce considered a derivitive work. The 
- *         Original Copyright as been included, unmodified, below.
- *
- * ---------------------------------------------------------------------------
- *         
  * Copyright 2014, 2015 James Geall
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,3 +13,18 @@ extensions: .cs
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+using System.Collections.Generic;
+using System.Linq;
+using MongoDB.Bson;
+
+namespace AuthCentral.MongoStore.Admin
+{
+    internal static class MongoCollectionExtensions
+    {
+        public static bool CollectionExists(this List<BsonDocument> docs,  string name)
+        {
+            return docs.Count > 0 && docs.Any(x =>x.Contains("name") &&  x["name"].IsString && x["name"].AsString == name);
+        }
+    }
+}

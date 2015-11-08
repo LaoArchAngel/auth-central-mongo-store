@@ -1,13 +1,4 @@
-extensions: .cs
 /*
- * ---------------------------------------------------------------------------
- *
- * NOTICE: This file was modified from it's original form by Food Service
- *         Warehouse and is hencforce considered a derivitive work. The 
- *         Original Copyright as been included, unmodified, below.
- *
- * ---------------------------------------------------------------------------
- *         
  * Copyright 2014, 2015 James Geall
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,3 +13,16 @@ extensions: .cs
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+using System.Threading.Tasks;
+using IdentityServer3.Core.Models;
+
+namespace AuthCentral.MongoStore.Admin
+{
+    public interface IClientService
+    {
+        Task Save(Client client);
+        Task<Client> Find(string clientId);
+        Task Delete(string clientId);
+    }
+}

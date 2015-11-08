@@ -1,4 +1,12 @@
 ﻿/*
+ * ---------------------------------------------------------------------------
+ *
+ * NOTICE: This file was modified from it's original form by Food Service
+ *         Warehouse and is hencforce considered a derivitive work. The 
+ *         Original Copyright as been included, unmodified, below.
+ *
+ * ---------------------------------------------------------------------------
+ *         
  * Copyright 2014, 2015 James Geall
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,9 +25,9 @@ using System;
 using Autofac;
 using IdentityServer3.Core.Configuration;
 using IdentityServer3.Core.Services;
-using IdentityServer3.MongoDb;
+using AuthCentral.MongoStore;
 
-namespace Core.MongoDb.Tests
+namespace AuthCentral.MongoStore.Tests
 {
     public class Factory
     {

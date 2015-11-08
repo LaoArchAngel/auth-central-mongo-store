@@ -1,4 +1,12 @@
 ﻿/*
+ * ---------------------------------------------------------------------------
+ *
+ * NOTICE: This file was modified from it's original form by Food Service
+ *         Warehouse and is hencforce considered a derivitive work. The 
+ *         Original Copyright as been included, unmodified, below.
+ *
+ * ---------------------------------------------------------------------------
+ *         
  * Copyright 2014, 2015 James Geall
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,13 +21,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 using IdentityServer3.Core.Configuration;
 using IdentityServer3.Core.Services;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace IdentityServer3.MongoDb
+namespace AuthCentral.MongoStore
 {
     public class ServiceFactory : IdentityServerServiceFactory
     {

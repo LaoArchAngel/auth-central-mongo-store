@@ -1,4 +1,12 @@
 ﻿/*
+ * ---------------------------------------------------------------------------
+ *
+ * NOTICE: This file was modified from it's original form by Food Service
+ *         Warehouse and is hencforce considered a derivitive work. The 
+ *         Original Copyright as been included, unmodified, below.
+ *
+ * ---------------------------------------------------------------------------
+ *         
  * Copyright 2014, 2015 James Geall
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,11 +29,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("IdentityServer.Core.MongoDb")]
+[assembly: AssemblyTitle("AuthCentral.MongoStore")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("IdentityServer.Core.MongoDb")]
+[assembly: AssemblyProduct("AuthCentral.MongoStore")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -38,7 +46,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("b51acbf5-fea3-43c9-96e5-1fb12426a3dd")]
+[assembly: Guid("5d9af20c-0852-454f-9c09-4c11928ebe91")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -54,6 +62,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-[assembly: InternalsVisibleTo("Core.MongoDb.Tests")]
-[assembly: InternalsVisibleTo("IdentityServer3.Admin.MongoDb")]
-[assembly: InternalsVisibleTo("IdentityServer3.Admin.MongoDb.Powershell")]
+[assembly: InternalsVisibleTo("AuthCentral.MongoStore.Tests")]
