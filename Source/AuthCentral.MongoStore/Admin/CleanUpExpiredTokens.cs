@@ -1,4 +1,12 @@
 ﻿/*
+ * ---------------------------------------------------------------------------
+ *
+ * NOTICE: This file was modified from its original form by Food Service
+ *         Warehouse and is intended to be derivative work. The 
+ *         original copyright has been included, unmodified, below.
+ *
+ * ---------------------------------------------------------------------------
+ *         
  * Copyright 2014, 2015 James Geall
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +21,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 using System;
 using System.Threading.Tasks;
 using MongoDB.Bson;

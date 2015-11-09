@@ -1,9 +1,9 @@
 /*
  * ---------------------------------------------------------------------------
  *
- * NOTICE: This file was modified from it's original form by Food Service
- *         Warehouse and is hencforce considered a derivitive work. The 
- *         Original Copyright as been included, unmodified, below.
+ * NOTICE: This file was modified from its original form by Food Service
+ *         Warehouse and is intended to be derivative work. The 
+ *         original copyright has been included, unmodified, below.
  *
  * ---------------------------------------------------------------------------
  *         
@@ -21,8 +21,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// ReSharper disable PossibleNullReferenceException
-
 // Define LIBLOG_PORTABLE conditional compilation symbol for PCL compatibility
 //
 // Define LIBLOG_PUBLIC to enable ability to GET a logger (LogProvider.For<>() etc) from outside this library. NOTE:

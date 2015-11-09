@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>AuthCentral.MongoStore</id>
-    <title>IdentityServer3 MongoDB Persistence for AuthCentral</title>
+    <id>Fsw.Enterprise.AuthCentral.MongoStore</id>
+    <title>Fsw.Enterprise.AuthCentral.MongoStore</title>
     <version>$version$</version>
     <authors>FSW</authors>
     <owners>FSW</owners>
@@ -18,6 +18,6 @@
     </dependencies>
   </metadata>
   <files>
-      <file src="Out\AuthCentral.MongoStore.dll" target="lib\net45"/>
+      <file src="Source\AuthCentral.MongoStore\bin\Release\Fsw.Enterprise.AuthCentral.MongoStore.dll" target="lib\net45"/>
   </files>
 </package>
