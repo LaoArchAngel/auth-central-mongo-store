@@ -30,8 +30,6 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using Builder = MongoDB.Driver.Builders<MongoDB.Bson.BsonDocument>;
 
-using Fsw.Enterprise.AuthCentral.MongoStore;
-
 namespace Fsw.Enterprise.AuthCentral.MongoStore.Admin
 {
     internal class AdminService : IDatabaseService, IClientService, IScopeService
@@ -169,6 +167,11 @@ namespace Fsw.Enterprise.AuthCentral.MongoStore.Admin
         async Task<IEnumerable<Scope>> IScopeService.Find(IEnumerable<string> scopeNames)
         {
             return await _scopeStore.FindScopesAsync(scopeNames);
+        }
+
+        async Task<IEnumerable<Scope>> IScopeService.Get(bool publicOnly)
+        {
+            return await _scopeStore.GetScopesAsync(publicOnly);
         }
 
    }

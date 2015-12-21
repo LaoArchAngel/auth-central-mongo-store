@@ -27,11 +27,41 @@ using IdentityServer3.Core.Models;
 
 namespace Fsw.Enterprise.AuthCentral.MongoStore.Admin
 {
+    /// <summary>
+    /// Service for interacting with AuthCentral's scopes.
+    /// </summary>
     public interface IScopeService
     {
+        /// <summary>
+        /// Saves the specified scope.
+        /// </summary>
+        /// <param name="scope">The scope.</param>
         Task Save(Scope scope);
+
+        /// <summary>
+        /// Deletes the specified scope name.
+        /// </summary>
+        /// <param name="scopeName">Name of the scope.</param>
         Task Delete(string scopeName);
+
+        /// <summary>
+        /// Finds the specified scope name.
+        /// </summary>
+        /// <param name="scopeName">Name of the scope.</param>
         Task<Scope> Find(string scopeName);
+
+        /// <summary>
+        /// Finds the scopes with the specified names. Searches for exact matches.
+        /// </summary>
+        /// <param name="scopeNames">The scope names.</param>
+        /// <returns>List of scopes with the given names.</returns>
         Task<IEnumerable<Scope>> Find(IEnumerable<string> scopeNames);
+
+        /// <summary>
+        /// Gets all of the scopes.
+        /// </summary>
+        /// <param name="publicOnly">if set to <c>true</c> will only return publicly visibly scopes.</param>
+        /// <returns>List of all scopes.</returns>
+        Task<IEnumerable<Scope>> Get(bool publicOnly = true);
     }
 }
