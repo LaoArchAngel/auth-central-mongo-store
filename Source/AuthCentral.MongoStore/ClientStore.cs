@@ -27,6 +27,7 @@ using IdentityServer3.Core.Services;
 using Fsw.Enterprise.AuthCentral.MongoStore.Logging;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using System.Collections.Generic;
 
 namespace Fsw.Enterprise.AuthCentral.MongoStore
 {
@@ -55,5 +56,41 @@ namespace Fsw.Enterprise.AuthCentral.MongoStore
 
             return result;
         }
+
+        public async Task<IList<Client>> GetPageAsync(int pageNumber, int rowsPerPage)
+        {
+            IList<Client> result = new List<Client>();
+
+            var rowsToSkip = (pageNumber - 1) * rowsPerPage;
+            var rowsToReturn = rowsPerPage + 1;
+            List<BsonDocument> loaded = await Collection.Find(doc => true).Skip(rowsToSkip).Limit(rowsToReturn).ToListAsync();
+
+            if (loaded != null)
+            {
+                foreach(BsonDocument doc in loaded)
+                {
+                    result.Add(_serializer.Deserialize(doc));
+                }
+            }
+
+            return result;
+        }
+
+        public async Task<IList<Client>> GetRangeAsync(int offset, int limit)
+        {
+            IList<Client> result = new List<Client>();
+            List<BsonDocument> loaded = await Collection.Find(doc => true).Skip(offset).Limit(limit+1).ToListAsync();
+
+            if (loaded != null)
+            {
+                foreach(BsonDocument doc in loaded)
+                {
+                    result.Add(_serializer.Deserialize(doc));
+                }
+            }
+
+            return result;
+        }
+
     }
 }

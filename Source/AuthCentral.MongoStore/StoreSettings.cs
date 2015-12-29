@@ -38,8 +38,9 @@ namespace Fsw.Enterprise.AuthCentral.MongoStore
         {
             return new StoreSettings
             {
-                ConnectionString = "mongodb://localhost",
-                Database = "identityserver",
+                //ConnectionString = "mongodb://localhost",
+                ConnectionString = "mongodb://FSWDEVMongo:30000,FSWDEVMongo:40000,FSWDEVMongo:50000/authcentral-ids?connectTimeoutMS=20000",
+                Database = "identityserver_testonly",
                 ClientCollection = "clients",
                 ScopeCollection = "scopes",
                 ConsentCollection = "consents",

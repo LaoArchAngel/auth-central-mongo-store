@@ -99,17 +99,10 @@ namespace Fsw.Enterprise.AuthCentral.MongoStore.Tests
             await _setup;
             await _store.RevokeAsync(SubjectA, "Client0");
             var result = (await _store.GetAllAsync(SubjectA)).ToArray();
-            Assert.Equal(
-                _subjectATokens
-                    .Where(x => x.ClientId == "Client1")
-                    .OrderBy(LifeTimeOrdering)
-                    .Select(TestData.ToTestableString)
-                    ,
-                result
-                    .OfType<RefreshToken>()
-                    .OrderBy(LifeTimeOrdering)
-                    .Select(TestData.ToTestableString)
-                );
+
+            IEnumerable<string> expected = _subjectATokens.Where(x => x.ClientId == "Client1").OrderBy(LifeTimeOrdering).Select(TestData.ToTestableString);
+            IEnumerable<string> actual = result.OfType<RefreshToken>().OrderBy(LifeTimeOrdering).Select(TestData.ToTestableString);
+            Assert.Equal(expected, actual);
         }
         static int LifeTimeOrdering(RefreshToken token)
         {
