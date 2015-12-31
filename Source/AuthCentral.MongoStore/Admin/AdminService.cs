@@ -23,6 +23,7 @@
  */
 
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using IdentityServer3.Core.Models;
@@ -148,6 +149,20 @@ namespace Fsw.Enterprise.AuthCentral.MongoStore.Admin
             return await _clientStore.FindClientByIdAsync(clientId);
         }
 
+        async Task<ClientPagingResult> IClientService.GetPageAsync(int pageNumber, int rowsPerPage)
+        {
+            var values = await _clientStore.GetPageAsync(pageNumber, rowsPerPage);
+
+            return new ClientPagingResult { Collection = values.Take(rowsPerPage), HasMore = values.Count > rowsPerPage };
+        }
+
+        async Task<ClientPagingResult> IClientService.GetRangeAsync(int offset, int limit)
+        {
+            var values = await _clientStore.GetRangeAsync(offset, limit);
+
+            return new ClientPagingResult { Collection = values.Take(limit), HasMore = values.Count > limit };
+        }
+ 
         async Task<Scope> IScopeService.Find(string scopeName)
         {
             IList<string> scopes = new List<string>();
@@ -173,6 +188,5 @@ namespace Fsw.Enterprise.AuthCentral.MongoStore.Admin
         {
             return await _scopeStore.GetScopesAsync(publicOnly);
         }
-
    }
 }

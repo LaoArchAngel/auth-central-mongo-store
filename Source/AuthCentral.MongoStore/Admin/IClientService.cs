@@ -31,5 +31,7 @@ namespace Fsw.Enterprise.AuthCentral.MongoStore.Admin
         Task Save(Client client);
         Task<Client> Find(string clientId);
         Task Delete(string clientId);
+        Task<ClientPagingResult> GetPageAsync(int pageNumber, int rowsPerPage);
+        Task<ClientPagingResult> GetRangeAsync(int offset, int limit);
     }
 }

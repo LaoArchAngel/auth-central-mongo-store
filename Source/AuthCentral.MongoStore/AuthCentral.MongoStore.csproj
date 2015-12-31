@@ -65,6 +65,7 @@
     <Compile Include="AuthorizationCodeStore.cs" />
     <Compile Include="BsonDocumentExtensions.cs" />
     <Compile Include="ClaimSetSerializer.cs" />
+    <Compile Include="ClientPagingResult.cs" />
     <Compile Include="ConsentStore.cs" />
     <Compile Include="Filter.cs" />
     <Compile Include="GuidGenerator.cs" />
